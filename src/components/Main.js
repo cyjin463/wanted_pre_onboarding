@@ -6,8 +6,8 @@ const Main = () => {
 
   return (
     <div>
-      <button onClick={() => history.push("/Toggle")}>Test1</button>
-      <button onClick={() => history.push("/Toggle")}>Test2</button>
+      <button onClick={() => history.push("/Toggle")}>Toggle</button>
+      <button onClick={() => history.push("/Tab")}>Tab</button>
     </div>
   );
 };
