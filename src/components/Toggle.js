@@ -1,34 +1,39 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Toggle = () => {
+  const history = useHistory();
   const [check, setCheck] = React.useState("nomal");
   return (
-    <Container>
-      <label className={check === "nomal" ? "nomal" : ""}>
-        <input
-          onChange={(e) => {
-            setCheck(e.target.value);
-          }}
-          type='radio'
-          name='selet'
-          value='nomal'
-        />
-        기본
-      </label>
-      <label className={check === "detail" ? "detail" : ""}>
-        <input
-          onChange={(e) => {
-            setCheck(e.target.value);
-          }}
-          type='radio'
-          name='selet'
-          value='detail'
-        />
-        상세
-      </label>
-      <svg className={check === "nomal" ? "nomal" : "detail"} />
-    </Container>
+    <>
+      <Container>
+        <label className={check === "nomal" ? "nomal" : ""}>
+          <input
+            onChange={(e) => {
+              setCheck(e.target.value);
+            }}
+            type='radio'
+            name='selet'
+            value='nomal'
+          />
+          기본
+        </label>
+        <label className={check === "detail" ? "detail" : ""}>
+          <input
+            onChange={(e) => {
+              setCheck(e.target.value);
+            }}
+            type='radio'
+            name='selet'
+            value='detail'
+          />
+          상세
+        </label>
+        <svg className={check === "nomal" ? "nomal" : "detail"} />
+      </Container>
+      <button onClick={() => history.goBack()}>뒤로가기</button>
+    </>
   );
 };
 

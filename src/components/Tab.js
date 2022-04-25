@@ -1,46 +1,51 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Tab = () => {
+  const history = useHistory();
   const [check, setCheck] = React.useState("P");
-  console.log(check);
+
   return (
-    <Container>
-      <label className={check === "P" ? "P" : ""}>
-        <input
-          onChange={(e) => {
-            setCheck(e.target.value);
-          }}
-          type='radio'
-          name='selet'
-          value='P'
-        />
-        감자
-      </label>
-      <label className={check === "SP" ? "SP" : ""}>
-        <input
-          onChange={(e) => {
-            setCheck(e.target.value);
-          }}
-          type='radio'
-          name='selet'
-          value='SP'
-        />
-        고구마
-      </label>
-      <label className={check === "Cu" ? "Cu" : ""}>
-        <input
-          onChange={(e) => {
-            setCheck(e.target.value);
-          }}
-          type='radio'
-          name='selet'
-          value='Cu'
-        />
-        카레라이스
-      </label>
-      <svg className={check === "P" ? "P" : check === "SP" ? "SP" : "Cu"} />
-    </Container>
+    <>
+      <Container>
+        <label className={check === "P" ? "P" : ""}>
+          <input
+            onChange={(e) => {
+              setCheck(e.target.value);
+            }}
+            type='radio'
+            name='selet'
+            value='P'
+          />
+          감자
+        </label>
+        <label className={check === "SP" ? "SP" : ""}>
+          <input
+            onChange={(e) => {
+              setCheck(e.target.value);
+            }}
+            type='radio'
+            name='selet'
+            value='SP'
+          />
+          고구마
+        </label>
+        <label className={check === "Cu" ? "Cu" : ""}>
+          <input
+            onChange={(e) => {
+              setCheck(e.target.value);
+            }}
+            type='radio'
+            name='selet'
+            value='Cu'
+          />
+          카레라이스
+        </label>
+        <svg className={check === "P" ? "P" : check === "SP" ? "SP" : "Cu"} />
+      </Container>
+      <button onClick={() => history.goBack()}>뒤로가기</button>
+    </>
   );
 };
 const Container = styled.div`
