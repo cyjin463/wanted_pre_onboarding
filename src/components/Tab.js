@@ -44,7 +44,6 @@ const Tab = () => {
         </label>
         <svg className={check === "P" ? "P" : check === "SP" ? "SP" : "Cu"} />
       </Container>
-      <button onClick={() => history.goBack()}>뒤로가기</button>
     </>
   );
 };
