@@ -9,6 +9,7 @@ const Main = () => {
       <button onClick={() => history.push("/Toggle")}>Toggle</button>
       <button onClick={() => history.push("/Tab")}>Tab</button>
       <button onClick={() => history.push("/Input")}>Input</button>
+      <button onClick={() => history.push("/Dropdown")}>Dropdown</button>
     </div>
   );
 };

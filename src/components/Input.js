@@ -56,7 +56,6 @@ const Input = () => {
           )}
         </span>
       </div>
-      <button onClick={() => history.goBack()}>뒤로가기</button>
     </Container>
   );
 };
@@ -64,7 +63,8 @@ const Input = () => {
 const Container = styled.div`
   position: relative;
   width: 100px;
-
+  display: flex;
+  flex-direction: column;
   div {
     > span {
       font-size: 14px;

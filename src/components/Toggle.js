@@ -32,7 +32,6 @@ const Toggle = () => {
         </label>
         <svg className={check === "nomal" ? "nomal" : "detail"} />
       </Container>
-      <button onClick={() => history.goBack()}>뒤로가기</button>
     </>
   );
 };
