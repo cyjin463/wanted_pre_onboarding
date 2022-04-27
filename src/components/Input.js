@@ -89,6 +89,7 @@ const Container = styled.div`
     height: 20px;
     left: 177px;
     top: 67px;
+    cursor: pointer;
   }
 `;
 
